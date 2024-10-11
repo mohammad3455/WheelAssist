@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - WheelAssist</title>
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #000000;
+            --primary: #3b82f6;
+            --primary-foreground: #ffffff;
+            --muted: #f3f4f6;
+            --muted-foreground: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .signup-container {
+            background-color: var(--background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .signup-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .signup-header p {
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--muted);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border: none;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        .signup-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signup-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .signup-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .wheelchair-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <script src="signup.js" type="module" differ></script>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-header">
+            <svg class="wheelchair-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="14" cy="6" r="2"/>
+                <path d="M7 6h3"/>
+                <path d="M7 10h3"/>
+                <path d="M11 14h3"/>
+                <path d="M11 18h3"/>
+                <circle cx="8" cy="18" r="2"/>
+                <circle cx="17" cy="18" r="2"/>
+                <path d="M7 6v12"/>
+            </svg>
+            <h1>Join WheelAssist</h1>
+            <p>Create your account to get started</p>
+        </div>
+        <form class="signup-form" id="signupForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Create a password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+            </div>
+            <div class="form-group">
+                <label for="user-type">I am a:</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="">Select user type</option>
+                    <option value="wheelchair-user">Wheelchair User</option>
+                    <option value="caregiver">Caregiver</option>
+                    <option value="healthcare-professional">Healthcare Professional</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="signup-footer">
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+            <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - WheelAssist</title>
+        <script src="login.js" type="module" differ></script>
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #000000;
+            --primary: #3b82f6;
+            --primary-foreground: #ffffff;
+            --muted: #f3f4f6;
+            --muted-foreground: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: var(--background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--muted);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border: none;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .login-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .wheelchair-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <svg class="wheelchair-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="14" cy="6" r="2"/>
+                <path d="M7 6h3"/>
+                <path d="M7 10h3"/>
+                <path d="M11 14h3"/>
+                <path d="M11 18h3"/>
+                <circle cx="8" cy="18" r="2"/>
+                <circle cx="17" cy="18" r="2"/>
+                <path d="M7 6v12"/>
+            </svg>
+            <h1>Welcome to WheelAssist</h1>
+            <p>Please log in to access your account</p>
+        </div>
+        <form class="login-form" id="loginForm" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit" >Log In</button>
+        </form>
+        <div class="login-footer">
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            <p><a href="#">Forgot your password?</a></p>
+        </div>
+    </div>
+</body>
+</html>

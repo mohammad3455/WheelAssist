@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+   background: black;
+} */
+ .nav1:hover{
+background-color: rgb(123, 214, 154);
+ }
+ .repair:hover{
+background-color: rgb(228, 165, 84);
+ }
+ .rent:hover{
+    background-color: rgb(115, 115, 216);
+    
+ }
+ .login:hover{
+    background-color: rgb(161, 121, 199);
+ }
+.pogo{
+    font-weight: 400;
+ }
+.pogo span{
+    font-weight: 700;
+    margin-left: 0;
+ }
+ @keyframes scroll{ 
+        0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-1100px * 7));
+    }
+}
+.slider{
+    height: 90px;
+    margin: auto;
+    padding: 0 60px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+.slider .slide-track{
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(1100px * 14);
+}
+.slider .slide{
+    height: 90px;
+    width: 1100px;
+    margin: 0 40px;
+}
+@keyframes scroll{ 
+    0%{
+    transform: translateX(0);
+}
+100%{
+    transform: translateX(calc(-700px * 2));
+}
+}
+.cus{
+height: 500px;
+margin: auto;
+padding: 0 60px 0 0;
+overflow: hidden;
+position: relative;
+width: auto;
+}
+.cus .cus-track{
+animation: scroll 30s linear infinite;
+display: flex;
+width: calc(700px * 4);
+}
+.cus .cusslide{
+height: 500px;
+width: 700px;
+margin: 0 40px;
+}
+
+
+.c:hover{
+    background-color: orange;
+}
+.h:hover{
+    background-color: rgb(231, 57, 57);
+}
+.o:hover{
+    background-color: rgb(104, 219, 93);
+}
+.o2:hover{
+    background-color: rgb(43, 25, 209);
+}
+.s:hover{
+    background-color: rgb(107, 104, 98);
+}
+.e:hover{
+    background-color: rgb(71, 221, 231);
+}
